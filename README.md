@@ -77,7 +77,7 @@ const config = {
         // Add as many wishes as you like!
     ]
 };
-
+```
 ### 4. View Your Creation!
 
 Because this project loads local files, you can't just double-click the `index.html` file to view it.  
