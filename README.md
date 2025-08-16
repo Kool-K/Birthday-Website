@@ -32,7 +32,7 @@ Birthday Greeting/
 └── assets/
 ├── images/ <-- Your photos go here
 └── audio/ <-- Your song goes here
-
+```
 
 ### 2. Add Your Photos and Music
 
