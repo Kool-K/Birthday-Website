@@ -237,7 +237,7 @@
             // =================================================================
 
 
-            // --- Element References ---
+            // JS Element References
             const mysteryBtn = document.getElementById('mystery-btn');
             const mysteryContainer = document.getElementById('mystery-container');
             const content = document.getElementById('content');
@@ -249,7 +249,7 @@
             const particleContainer = document.getElementById('particle-container');
             const decorationContainer = document.getElementById('decoration-container');
 
-            // --- Apply Customization from config ---
+            // Apply Customization from config.json
             document.title = `🎂 ${config.name}'s Birthday Journey!`;
             document.getElementById('favicon').href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${config.faviconEmoji}</text></svg>`;
             document.getElementById('mystery-text').textContent = `A special surprise for ${config.name} is waiting...`;
@@ -291,7 +291,7 @@
                 musicPlaying = !musicPlaying;
             });
 
-            // --- Animated Decorations & Easter Eggs ---
+            // Animated Decorations & Easter Eggs
             const popSound = new Tone.MembraneSynth().toDestination();
             function createDecorations() {
                 const hearts = 15;
@@ -321,7 +321,7 @@
             }
             createDecorations();
 
-            // --- Background Particles ---
+            //Background Particles (hearts)
             function createParticles() {
                 for (let i = 0; i < 40; i++) {
                     const particle = document.createElement('div');
@@ -339,7 +339,7 @@
             }
             createParticles();
 
-            // --- Main Reveal Animation ---
+            // Main Reveal Animation
             mysteryBtn.addEventListener('click', () => {
                 gsap.to(mysteryContainer, {
                     opacity: 0,
@@ -373,7 +373,7 @@
                     );
             });
 
-            // --- Scroll-Based Animations ---
+            //Scroll-Based Animations for mem card
             gsap.utils.toArray('.memory-card').forEach((item) => {
                 gsap.from(item, {
                     opacity: 0,
@@ -388,7 +388,7 @@
                 });
             });
 
-            // --- Wishes Wall Animation ---
+            // Wishes Wall Animation
             let wishInterval;
             function createWish() {
                 const wishIndex = Math.floor(Math.random() * config.wishes.length);
@@ -483,7 +483,7 @@
                 once: true,
             });
 
-            // --- Confetti Logic ---
+            //Confetti Logic
             const ctx = confettiCanvas.getContext('2d');
             function launchConfetti() {}
             function createMiniConfetti(x, y) {}
