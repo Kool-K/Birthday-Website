@@ -9,7 +9,7 @@ This project was originally created as a special birthday surprise for my sister
 ---
 
 ## ✨ Features
-
+- **Interactive "Deep Sea" Intro:** A stunning, mouse-interactive welcome screen with a deep blue ocean, generating ripples, bubbles, and featuring a school of gently swimming fish and a majestic whale that occasionally drifts by.
 - **A Beautiful, Animated Journey:** The website unfolds like a story with smooth, scroll-based animations.  
 - **Personalized Memory Lane:** Showcase your favorite photos in an elegant "scrapbook" style.  
 - **Magical Wishes Wall:** A never-ending, floating shower of good wishes for the birthday person.  
@@ -60,6 +60,11 @@ const config = {
     audioArtist: "Artist Name", // Add the artist's name for credit
     audioSource: "Website Name", // Add where you got the song from
     
+    imageCredit: {
+        artist: "Michael Fenton", // Add the background artist's name
+        source: "Unsplash"       // Add where you got the background from
+    },
+
     photos: [
         { url: './assets/images/your-photo-1.jpg', caption: 'Your first caption here!' },
         { url: './assets/images/your-photo-2.jpg', caption: 'Your second caption here!' },
@@ -79,6 +84,7 @@ const config = {
         // Add as many wishes as you like!
     ]
 };
+
 ```
 ### 4. View Your Creation!
 
@@ -97,9 +103,10 @@ Your beautiful, personalized birthday website will open in your browser! 🎉
 
 This project was built with love and is meant to be shared. Feel free to use it, fork it, and make it your own.
 
-- **Music:** The default track is *"Happy Birthday"* by WaveMaster from Pixabay. Please give credit if you use their music!  
+- **Music:** The default track is *"Happy Birthday"* by WaveMaster from Pixabay.
+- **Images:** Wish Sky image is from Unsplash clicked by Michael Fenton.
 - **Animations:** Powered by the amazing **GSAP** library.  
-- **Heart photo by Michael Fenton taken from Unsplash
+- **Sound Effects:** Powered by Tone.js.
       
 
 Enjoy spreading the birthday magic! ✨
