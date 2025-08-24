@@ -99,5 +99,7 @@ This project was built with love and is meant to be shared. Feel free to use it,
 
 - **Music:** The default track is *"Happy Birthday"* by WaveMaster from Pixabay. Please give credit if you use their music!  
 - **Animations:** Powered by the amazing **GSAP** library.  
+- **Heart photo by Michael Fenton taken from Unsplash
+      
 
 Enjoy spreading the birthday magic! ✨
