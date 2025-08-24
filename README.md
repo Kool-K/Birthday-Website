@@ -1,6 +1,7 @@
 # 💖 An Enchanted Birthday Journey 💖
 
 View the live demo here -> https://kool-k.github.io/Birthday-Website/
+
 A beautiful, single-file, animated website template to wish your loved ones a happy birthday in a memorable and magical way.
 
 This project was originally created as a special birthday surprise for my sister, Shalmali, and has been turned into a template so you can share the magic too! It's designed to be super easy to personalize, even if you don't know how to code.
