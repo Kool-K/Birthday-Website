@@ -312,8 +312,8 @@
 
       <footer class="text-center py-8 mt-12 text-gray-500">
         <p>Crafted with <i class="fas fa-heart text-red-500 animate-pulse"></i> by Ketaki for her sister.</p>
-        <p>Heart photo for the wish sky clicked by Michael Fenton</p>
         <p id="music-credit" class="text-sm mt-2"></p>
+        <p id="image-credit" class="text-sm mt-1"></p>
       </footer>
     </main>
 
@@ -338,6 +338,10 @@
           audioSrc: "./assets/audio/birthday-song.mp3",
           audioArtist: "WaveMaster",
           audioSource: "Pixabay",
+          imageCredit: {
+            artist: "Michael Fenton",
+            source: "Unsplash"
+          },
           photos: [
             { url: "./assets/images/photo1.png", caption: "That unforgettable camping day!" },
             { url: "./assets/images/photo2.png", caption: "So proud of you on your graduation day." },
@@ -369,6 +373,7 @@
         const musicIcon = document.getElementById("music-icon");
         const bgMusic = document.getElementById("bg-music");
         const musicCredit = document.getElementById("music-credit");
+        const imageCredit = document.getElementById("image-credit");
         const confettiCanvas = document.getElementById("confetti-canvas");
 
         // Apply Customization
@@ -383,6 +388,10 @@
           if (config.audioArtist && config.audioSource) {
             musicCredit.innerHTML = `Music by ${config.audioArtist} from ${config.audioSource}`;
           }
+        }
+        
+        if (config.imageCredit && config.imageCredit.artist && config.imageCredit.source) {
+            imageCredit.innerHTML = `Wish Sky image by ${config.imageCredit.artist} from ${config.imageCredit.source}`;
         }
 
         const memoriesGrid = document.getElementById("memories-grid");
@@ -585,7 +594,7 @@
         const wishCardClose = document.getElementById("wish-card-close");
         const wishOverlay = document.getElementById("wish-card-overlay");
         const popSound = new Tone.MembraneSynth().toDestination();
-        const numberOfHearts = 15;
+        
         let lastWishIndex = -1;
 
         function showWish() {
@@ -606,6 +615,9 @@
 
         function createPulsatingHearts() {
             const heartContainerWidth = heartContainer.offsetWidth;
+            // Responsive number of hearts
+            const numberOfHearts = window.innerWidth < 768 ? 8 : 15;
+
             for (let i = 0; i < numberOfHearts; i++) {
                 const heart = document.createElement("div");
                 heart.className = "pulsating-heart";
